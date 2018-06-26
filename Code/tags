@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC_C	Makefile	/^CC_C=$(CROSS_TOOL)gcc$/;"	m
+CROSS_TOOL	Makefile	/^CROSS_TOOL=$/;"	m
+TARGETS	Makefile	/^TARGETS=client$/;"	m
+bufsize	socket.h	22;"	d
+check_again	server.c	/^void check_again(int input, int client_socketfd)$/;"	f
+check_string	create_c.c	/^int check_string(char buff[])  $/;"	f
+create_c	create_c.c	/^void create_c(int client_socketfd)$/;"	f
+create_chat	server.c	/^void create_chat(int client_socketfd)				\/* Chat function *\/$/;"	f
+main	86.c	/^int main() $/;"	f
+main	client.c	/^int main(int argc, char *argv[])$/;"	f
+main	server.c	/^int main(int argc, char *argv[])$/;"	f
+main	test.c	/^int main() $/;"	f
+read_content	file_read.c	/^void read_content(int client_socketfd)$/;"	f
+thread_funct	server.c	/^void *thread_funct(void *client_desc)$/;"	f

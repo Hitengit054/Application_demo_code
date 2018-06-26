@@ -1,0 +1,21 @@
+fork=>
+
+Fork system call use for creates a new process, which is called child process, which runs concurrently with process (which process called system call fork) and this process is called parent process. After a new child process created, both processes will execute the next instruction following the fork() system call.A child process use same pc(program counter), same CPU registers, same open files which use in parent process.It take no parameters and return integer value. Below are different values returned by fork().Negative Value: creation of a child process was unsuccessful.Zero: Returned to the newly created child process.Positive value: Returned to parent or caller. The value contains process ID of newly created child process.
+
+
+zombie=>
+
+A process which has finished the execution but still has entry in the process table to report to its parent process is known as a zombie process. A child process always first becomes a zombie before being removed from the process table. The parent process reads the exit status of the child process which reaps off the child process entry from the process table.
+
+
+orphan=>
+
+A process whose parent process no more exists i.e. either finished or terminated without waiting for its child process to terminate is called an orphan process.In the following code, parent finishes execution and exits while the child process is still executing and is called an orphan process now.However, the orphan process is soon adopted by init process, once its parent process dies.
+
+
+grep=>
+
+grep command in Unix/Linux is a powerful tool that searches for matching a regular expression against text in a file, multiple files or a stream of input. It searches for the pattern of text that you specify on the command line and prints output for you.
+
+
+
