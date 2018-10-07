@@ -15,8 +15,8 @@
 /* -------------- Header file ---------------- */
 
 #include "socket.h"
-
-/* -------------- End of Header file ---------------- */
+/* changs in diff */
+/* ---------/----- End of Header file ---------------- */
 int main(int argc, char *argv[])
 {
 	/* -------------- local variables ---------------- */	
