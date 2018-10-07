@@ -30,6 +30,7 @@ void *thread_funct(void *arg);
 void check_again();
 void create_chat();
 
+/* for checking github commit */
 
 /* -------------- End of function prototype -----------*/
 
