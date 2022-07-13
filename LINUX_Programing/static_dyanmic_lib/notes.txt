@@ -1,0 +1,76 @@
+
+Static library
+
+1 :  Generate the Object files
+
+hiten:static_dyanmic_lib$ ls
+bill.c  main.c  notes.txt  second.c
+
+hiten:static_dyanmic_lib$ gcc -c bill.c second.c 
+
+hiten:static_dyanmic_lib$ ls -l
+total 24
+-rw-rw-r-- 1 hiten hiten   67 Oct  3 11:46 bill.c
+-rw-rw-r-- 1 hiten hiten 1536 Oct  3 11:47 bill.o
+-rw-rw-r-- 1 hiten hiten   65 Oct  3 11:46 main.c
+-rw-rw-r-- 1 hiten hiten   17 Oct  3 11:46 notes.txt
+-rw-rw-r-- 1 hiten hiten   71 Oct  3 11:46 second.c
+-rw-rw-r-- 1 hiten hiten 1544 Oct  3 11:47 second.o
+
+
+-----------------------------------------------------------
+
+2 : create the .a archieve file 
+
+hiten:static_dyanmic_lib$ ar crv libbill_second.a bill.o second.o 
+a - bill.o
+a - second.o
+
+-----------------------------------------------------------
+
+3. link static library 
+
+Method 1
+
+hiten:static_dyanmic_lib$ gcc main.c -o main libbill_second.a 
+hiten:static_dyanmic_lib$ ./main 
+In main Function
+In Bill Function
+In second Function
+
+
+Method 2
+
+hiten:static_dyanmic_lib$ gcc main.c -o main -L. -lbill_second
+hiten:static_dyanmic_lib$ ./main 
+In main Function
+In Bill Function
+In second Function
+
+-----------------------------------------------------------
+
+
+Shared library : 
+
+Disadvanatge of static 
+- RUN Main program at the same and they use the fucntions from the same library
+- So mainy copies present in the same Function
+
+$ gcc -shared -o libbill_second_shared.so bill.o second.o
+
+$ gcc main.c -o main -L/home/hiten/Documents/Internal_Knowledge/source/LINUX_Programing/static_dyanmic_lib -lbill_second_shared
+
+
+export LD_LIBRARY_PATH=/home/hiten/Documents/Internal_Knowledge/source/LINUX_Programing/static_dyanmic_lib:$LD_LIBRARY_PATH
+
+hiten:static_dyanmic_lib$ ./main 
+In main Function
+In Bill Function
+In second Function
+
+
+
+
+
+
+
